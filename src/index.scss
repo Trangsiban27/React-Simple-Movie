@@ -4,5 +4,42 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
-@layer {
+@layer base {
+  body {
+    @apply bg-slate-900 font-body px-5 text-white;
+  }
+}
+
+@layer components {
+  .page-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .movie-list .swiper-slide {
+    width: 230px;
+    height: auto;
+  }
+
+  .banner-list {
+    height: 500px;
+  }
+
+  .banner-list .swiper-slide {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+
+  li.selected {
+    @apply text-primary;
+  }
 }
