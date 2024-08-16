@@ -7,6 +7,12 @@
 @layer base {
   body {
     @apply bg-slate-900 font-body px-5 text-white;
+    padding: 0;
+  }
+
+  a.active {
+    color: #be365e;
+    font-weight: bold;
   }
 }
 

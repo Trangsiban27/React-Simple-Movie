@@ -57,10 +57,10 @@ const MoviePage = () => {
   return (
     <Fragment>
       <div className="flex items-center justify-center mb-5">
-        <div className="flex bg-white items-center rounded-lg">
+        <div className="flex items-center bg-white rounded-lg">
           <input
             type="text"
-            className="w-full rounded-lg px-5 py-3 outline-none text-black"
+            className="w-full px-5 py-3 text-black rounded-lg outline-none"
             placeholder="Enter your search?"
             onChange={handleChangeFilter}
           />
@@ -85,11 +85,11 @@ const MoviePage = () => {
       </div>
 
       {isLoading && (
-        <div className="w-10 h-10 border-4 border-primary rounded-full border-t-transparent animate-spin transition-all mx-auto"></div>
+        <div className="w-10 h-10 mx-auto transition-all border-4 rounded-full border-primary border-t-transparent animate-spin"></div>
       )}
 
       {!isLoading && (
-        <div className="grid grid-cols-5 gap-10">
+        <div className="grid grid-cols-3 gap-10">
           {movies.length > 0 &&
             movies.map((item) => (
               <MovieCard key={item.id} item={item}></MovieCard>
